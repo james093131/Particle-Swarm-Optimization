@@ -47,15 +47,14 @@ public:
         {
             Set(pop, dim, fun_num);
             Initial(pop, dim, MAX_NFE, fun_num); //random initial
-            record_point(pop, dim);
+            // record_point(pop, dim);
             while (NFE < MAX_NFE)
             {
                 Transition(pop, dim);
                 Evaluation(pop, dim, fun_num, MAX_NFE);
-                record_point(pop, dim);
+                // record_point(pop, dim);
             }
             Run_result[i] = Current_best_obj;
-            cout << Run_result[i] << endl;
         }
         END = clock();
         Output(run, MAX_NFE, dim, pop, START, END, fun_num);
@@ -204,15 +203,15 @@ private:
         }
 
         Run_AVG /= run;
-        for (int i = 0; i < run; i++)
+        for (int i = 0; i < Run_evaluation.size(); i++)
         {
-            cout << (i + 1) * pop << ' ' << double(Run_evaluation[i]) / run << endl; //using double to observe average convergence status.
+            cout << (i + 1) * pop << ' ' << Run_evaluation[i] / run << endl;
         }
         cout << "# Run : " << run << endl;
         cout << "# Evaluation : " << MAX_NFE << endl;
         cout << "# Dimension : " << dim << endl;
         cout << "# Population : " << pop << endl;
-        cout << "#Function number : " << fun_num << endl;
+        cout << "# Function number : " << fun_num << endl;
         cout << "# Best Objective : " << Run_Best << endl;
         cout << "# Average Objective : " << Run_AVG << endl;
         cout << "# Execution Time : " << (END - START) / CLOCKS_PER_SEC << "(s)" << endl;
