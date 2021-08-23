@@ -1,0 +1,8 @@
+# Run : 1
+# Evaluation : 100000
+# Dimension : 20
+# Population : 50
+#Function number : 1
+# Best Objective : 7.54951657e-15
+# Average Objective : 7.54951657e-15
+# Execution Time : 5.81421000e-01(s)

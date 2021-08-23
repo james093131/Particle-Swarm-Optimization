@@ -4,9 +4,16 @@
 #include <sstream>
 #include <stdlib.h>
 #include <string.h>
-#include <vector>
 #include <time.h>
+#include <vector>
+#include <algorithm>
+#include <math.h>
 #include <float.h>
+#include <sys/stat.h>
+#include <iomanip>
+#include <random> /* 亂數函式庫 */
+#include <ctime>
+#include <functional>
 #include "TestingFunction.cpp"
 
 using namespace std;
@@ -197,7 +204,7 @@ private:
         }
 
         Run_AVG /= run;
-        for (int i = 0; i < Run_evaluation.size(); i++)
+        for (int i = 0; i < run; i++)
         {
             cout << (i + 1) * pop << ' ' << double(Run_evaluation[i]) / run << endl; //using double to observe average convergence status.
         }

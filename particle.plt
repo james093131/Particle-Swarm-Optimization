@@ -1,15 +1,15 @@
 reset
-set term gif animate delay 0.05
+set terminal gif size 1024,768
+set term gif animate delay 50
 #set term gif animate
 
 set output "./Particle.gif"
-set xrange [-32.768: 32.768]
-set yrange [-32.768:32.768]
-set xyplane at 0
-
-do for [i=20:20000:400]{
-  set title sprintf("Ackley NFE = %i",i)
-  splot sprintf("/home/ailab/Downloads/Euclidean_distance/PLT_AND_TXT/R10_OG_DE/R10%i.txt",i) u 1:2:3 ps 0.2 pt 14  lc rgb '#8d99ae' t "points" 
+set xrange [-35.0: 35.0]
+set yrange [-35.0:35.0]
+set title font ",18"
+do for [i=50:5050:500]{
+  set title sprintf("Ackley NFE = %i",i-50)
+  plot sprintf("./2d_ackley_points/%i.txt",i) u 1:2 ps 2.5 pt 7  lc rgb '#8d99ae' t "Particles" 
   #bfa89e
 }
 set output
