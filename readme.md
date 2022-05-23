@@ -7,14 +7,14 @@ make
 ```
 Type the following command to run the program:
 ```cpp
-./PSO [Run] [Max_evaluation] [Dimension] [Population] [Function_number]
+./PSO [Run] [Dimension] [Function_number] [Population] 
 ```
 
 
 
 For example
 ```cpp
-./PSO 1 100000 10 50 1 
+./PSO 1 10 1 50 
 ```
 
 <div align="center">
