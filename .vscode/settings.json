@@ -1,6 +1,18 @@
 {
     "files.associations": {
+        "*.ejs": "html",
         "vector": "cpp",
-        "limits": "cpp"
+        "limits": "cpp",
+        "cmath": "cpp",
+        "*.tcc": "cpp",
+        "deque": "cpp",
+        "string": "cpp",
+        "system_error": "cpp",
+        "array": "cpp",
+        "memory": "cpp",
+        "random": "cpp",
+        "functional": "cpp",
+        "tuple": "cpp",
+        "atomic": "cpp"
     }
 }
